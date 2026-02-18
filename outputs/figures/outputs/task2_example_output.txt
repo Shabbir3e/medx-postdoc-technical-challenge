@@ -1,0 +1,8 @@
+img, label = test_ds[10]
+
+true_label = int(label.item()) if hasattr(label, "item") else int(label)
+p = predict_p_pneumonia(img)
+
+print("True Label:", true_label)
+print()
+print(generate_structured_report(p))
